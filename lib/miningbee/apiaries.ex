@@ -32,7 +32,9 @@ defmodule Miningbee.Apiaries do
     Repo.all(Sensor)
   end
 
-  def get_sensor!(id), do: Repo.get!(Sensor, id)
+  def get_sensor!(apiary_id, hive_id) do
+    Repo.get_by(Sensor, apiary_id: apiary_id, hive_id: hive_id)
+  end
 
   def create_sensor(attrs \\ %{}) do
     %Sensor{}
