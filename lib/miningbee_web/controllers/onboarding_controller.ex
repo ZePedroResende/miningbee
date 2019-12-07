@@ -1,8 +1,6 @@
 defmodule MiningbeeWeb.OnboardingController do
   use MiningbeeWeb, :controller
 
-  alias Miningbee.Apiaries
-  alias Miningbee.Apiaries.Gateway
   alias Miningbee.Onboarding
 
   action_fallback MiningbeeWeb.FallbackController
